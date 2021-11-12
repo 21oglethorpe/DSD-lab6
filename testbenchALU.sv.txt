@@ -6,7 +6,7 @@ logic[31:0] ALUResult;
 ALU top(SrcA, SrcB, ALUControl, ALUResult);
 initial
 begin
-SrcA<= 128, SrcB<=32, ALUControl <= 2; #100;
+SrcA<= 128; SrcB<=32; ALUControl <= 2; #100;
 ALUControl <= 6; #100;
 end
 
