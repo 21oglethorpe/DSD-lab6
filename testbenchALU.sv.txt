@@ -1,0 +1,13 @@
+module testbenchALU();
+logic[31:0] SrcA;
+logic[31:0] SrcB;
+logic[2:0] ALUControl;
+logic[31:0] ALUResult;
+ALU top(SrcA, SrcB, ALUControl, ALUResult);
+initial
+begin
+SrcA<= 128, SrcB<=32, ALUControl <= 2; #100;
+ALUControl <= 6; #100;
+end
+
+endmodule
